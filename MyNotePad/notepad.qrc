@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>images/about.png</file>
+        <file>images/all.png</file>
+        <file>images/back color.png</file>
+        <file>images/back.png</file>
+        <file>images/BackgroundColor.png</file>
+        <file>images/copy.png</file>
+        <file>images/Cut.png</file>
+        <file>images/exit.png</file>
+        <file>images/find.png</file>
+        <file>images/Font.png</file>
+        <file>images/FontColor.png</file>
+        <file>images/LineNumber.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/paste.png</file>
+        <file>images/redo.png</file>
+        <file>images/replace.png</file>
+        <file>images/save.png</file>
+        <file>images/saveas.png</file>
+        <file>images/StatusBar.png</file>
+        <file>images/toolbar.png</file>
+        <file>images/undo.png</file>
+        <file>images/Wrap.png</file>
+    </qresource>
+</RCC>

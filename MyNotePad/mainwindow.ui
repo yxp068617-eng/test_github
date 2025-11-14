@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="CodeEditor" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionactionOpen"/>
+    <addaction name="actionactionSave"/>
+    <addaction name="actionactionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionactionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+    <addaction name="actionactionUndo"/>
+    <addaction name="actionactionRedo"/>
+    <addaction name="actionactionCut"/>
+    <addaction name="actionactionCopy"/>
+    <addaction name="actionactionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionactionFind"/>
+    <addaction name="actionactionReplace"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelectAll"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>格式(&amp;O)</string>
+    </property>
+    <addaction name="actionactionWrap"/>
+    <addaction name="actionactionLineNumber"/>
+    <addaction name="actionactionFont"/>
+    <addaction name="actionFontColor"/>
+    <addaction name="actionBackgroundColor"/>
+    <addaction name="actionFontBackgroundColor"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>查看(&amp;V)</string>
+    </property>
+    <addaction name="actionactionToolBar"/>
+    <addaction name="actionactionStatusBar"/>
+   </widget>
+   <widget class="QMenu" name="menu_H_2">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_O"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu_H_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionactionOpen"/>
+   <addaction name="actionactionSave"/>
+   <addaction name="actionactionSaveAs"/>
+   <addaction name="separator"/>
+   <addaction name="actionactionUndo"/>
+   <addaction name="actionactionRedo"/>
+   <addaction name="actionactionCut"/>
+   <addaction name="actionactionCopy"/>
+   <addaction name="actionactionPaste"/>
+   <addaction name="separator"/>
+   <addaction name="actionactionFind"/>
+   <addaction name="actionactionReplace"/>
+   <addaction name="separator"/>
+   <addaction name="actionactionFont"/>
+   <addaction name="actionactionLineNumber"/>
+   <addaction name="actionactionWrap"/>
+   <addaction name="separator"/>
+   <addaction name="actionactionToolBar"/>
+   <addaction name="actionactionStatusBar"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/new.png</normaloff>:/new/prefix1/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+   <property name="toolTip">
+    <string>新建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionactionOpen">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/open.png</normaloff>:/new/prefix1/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(&amp;0)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionactionSave">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/save.png</normaloff>:/new/prefix1/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionactionSaveAs">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/saveas.png</normaloff>:/new/prefix1/images/saveas.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionactionExit">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/exit.png</normaloff>:/new/prefix1/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionactionUndo">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/undo.png</normaloff>:/new/prefix1/images/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销(&amp;U)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionactionCut">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/Cut.png</normaloff>:/new/prefix1/images/Cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(&amp;T)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionactionRedo">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/redo.png</normaloff>:/new/prefix1/images/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>恢复(&amp;)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionactionPaste">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/paste.png</normaloff>:/new/prefix1/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(&amp;P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionactionToolBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/toolbar.png</normaloff>:/new/prefix1/images/toolbar.png</iconset>
+   </property>
+   <property name="text">
+    <string>工具栏(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionactionStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/StatusBar.png</normaloff>:/new/prefix1/images/StatusBar.png</iconset>
+   </property>
+   <property name="text">
+    <string>状态栏(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionactionReplace">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/replace.png</normaloff>:/new/prefix1/images/replace.png</iconset>
+   </property>
+   <property name="text">
+    <string>替换(&amp;R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionactionPrint">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/print_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/images/print_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionPrint</string>
+   </property>
+  </action>
+  <action name="actionactionGoto">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/go_to_line_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/images/go_to_line_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionGoto</string>
+   </property>
+  </action>
+  <action name="actionactionLogo">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/aq_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>:/images/aq_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionLogo</string>
+   </property>
+  </action>
+  <action name="actionactionFind">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/find.png</normaloff>:/new/prefix1/images/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionactionFont">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/Font.png</normaloff>:/new/prefix1/images/Font.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionactionWrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/Wrap.png</normaloff>:/new/prefix1/images/Wrap.png</iconset>
+   </property>
+   <property name="text">
+    <string>自动换行(&amp;W)</string>
+   </property>
+  </action>
+  <action name="actionactionCopy">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/copy.png</normaloff>:/new/prefix1/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionactionLineNumber">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/LineNumber.png</normaloff>:/new/prefix1/images/LineNumber.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示行号(&amp;L)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/about.png</normaloff>:/new/prefix1/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionFontColor">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/FontColor.png</normaloff>:/new/prefix1/images/FontColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+  </action>
+  <action name="actionBackgroundColor">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/BackgroundColor.png</normaloff>:/new/prefix1/images/BackgroundColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>编辑器背景色</string>
+   </property>
+  </action>
+  <action name="actionFontBackgroundColor">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/FontColor.png</normaloff>:/new/prefix1/images/FontColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体背景色</string>
+   </property>
+  </action>
+  <action name="actionSelectAll">
+   <property name="icon">
+    <iconset resource="notepad.qrc">
+     <normaloff>:/new/prefix1/images/all.png</normaloff>:/new/prefix1/images/all.png</iconset>
+   </property>
+   <property name="text">
+    <string>全选(&amp;A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">codeeditor.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="notepad.qrc"/>
+ </resources>
+ <connections/>
+</ui>
